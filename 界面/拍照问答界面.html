@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deepseek - 拍照问答</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .screen {
+      width: 853px;
+      height: 580px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      border: 12px solid #1a1a1a;
+      position: relative;
+      overflow: hidden;
+    }
+    .camera-viewfinder {
+      border: 2px dashed rgba(255,255,255,0.7);
+      border-radius: 50%;
+      position: relative;
+    }
+    .camera-grid {
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .progress-dots {
+      background-image: radial-gradient(circle, #3b82f6 2px, transparent 2px);
+      background-size: 16px 16px;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #fef9c3 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="screen gradient-bg">
+    <div class="h-full flex flex-col p-6">
+
+      <!-- 顶部标题 + 用户信息 -->
+      <div class="flex justify-between items-center mb-4">
+        <div class="text-lg font-semibold text-gray-800">Deepseek 拍照问答</div>
+        <div class="flex items-center space-x-2">
+          <img src="https://i.pravatar.cc/32" class="w-8 h-8 rounded-full" alt="Avatar">
+          <span class="text-sm text-gray-700">小明</span>
+        </div>
+      </div>
+
+      <!-- 模拟系统状态栏 -->
+      <div class="flex justify-between items-center mb-6">
+        <i class="fas fa-times text-gray-700 text-xl"></i>
+        <div class="flex space-x-3">
+          <span class="px-4 py-2 bg-white bg-opacity-30 rounded-full text-gray-700">题目</span>
+          <span class="px-4 py-2 bg-blue-500 text-white rounded-full">物品</span>
+        </div>
+        <i class="fas fa-flash text-gray-700 text-xl"></i>
+      </div>
+
+      <!-- 相机取景器 -->
+      <div class="flex-1 flex items-center justify-center">
+        <div class="camera-viewfinder camera-grid w-72 h-64 flex items-center justify-center">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white bg-opacity-50"></div>
+          <div class="progress-dots absolute inset-0 opacity-50"></div>
+        </div>
+      </div>
+
+      <!-- 拍照按钮 -->
+      <div class="flex justify-center space-x-10 mt-6">
+        <button class="w-16 h-16 rounded-full bg-white bg-opacity-30 flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fas fa-images text-gray-700 text-xl"></i>
+        </button>
+        <button class="w-20 h-20 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-camera text-3xl"></i>
+        </button>
+        <button class="w-16 h-16 rounded-full bg-white bg-opacity-30 flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fas fa-history text-gray-700 text-xl"></i>
+        </button>
+      </div>
+
+      <!-- 底部提示语 -->
+      <div class="text-center mt-4 text-sm text-gray-600">
+        📸 请将物品放在圆圈中央，点击蓝色按钮进行识别
+      </div>
+
+      <!-- 拍照结果预览 -->
+      <div class="mt-4 bg-white bg-opacity-70 rounded-xl p-4">
+        <h3 class="text-sm font-bold text-gray-700 mb-2">识别结果：</h3>
+        <div class="flex items-center space-x-4">
+          <img src="https://images.unsplash.com/photo-1574226516831-e1dff420e12e?w=64" class="w-12 h-12 rounded" alt="识别结果图">
+          <div>
+            <p class="text-gray-800 font-semibold">香蕉</p>
+            <p class="text-xs text-gray-600">热带水果，富含钾元素</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

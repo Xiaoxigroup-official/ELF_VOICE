@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepseek - 语音助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .screen {
+            width: 853px;
+            height: 480px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 12px solid #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+        .desktop-column {
+            display: flex;
+            height: 100%;
+        }
+        .desktop-third {
+            width: 33.33%;
+            height: 100%;
+        }
+        .desktop-two-thirds {
+            width: 66.66%;
+            height: 100%;
+        }
+        .waveform {
+            background-image: url('https://uploads-ssl.webflow.com/5f5a6e1c462eed3a2a4e0b6e/62c6c8c0a1c1c1f5d8d5b5b4_Soundwave.gif');
+            background-size: cover;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #fef9c3 100%);
+        }
+        .avatar-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="screen gradient-bg">
+        <div class="desktop-column">
+            <div class="desktop-third p-8 flex flex-col items-center justify-center border-r border-gray-200">
+                <div class="avatar-pulse w-32 h-32 rounded-full bg-white flex items-center justify-center shadow-lg mb-6">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                         class="w-28 h-28 rounded-full object-cover" alt="Teacher">
+                </div>
+                
+                <div class="text-center mb-8">
+                    <h3 class="font-medium text-gray-700 text-xl">英语口语老师</h3>
+                    <p class="text-gray-500">已准备就绪，请开始对话</p>
+                </div>
+                
+                <div class="w-full waveform h-20 rounded-lg bg-white bg-opacity-30 overflow-hidden mb-6"></div>
+                
+                <button class="w-20 h-20 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg">
+                    <i class="fas fa-microphone text-3xl"></i>
+                </button>
+            </div>
+            
+            <div class="desktop-two-thirds flex flex-col">
+                <div class="p-6 border-b border-gray-200 flex justify-between items-center">
+                    <div class="flex space-x-2 bg-white bg-opacity-30 rounded-full p-1">
+                        <button class="px-6 py-2 bg-white text-blue-500 rounded-full">口语老师</button>
+                        <button class="px-6 py-2 text-gray-700 rounded-full">知识助手</button>
+                    </div>
+                    <button class="w-10 h-10 rounded-full bg-white bg-opacity-30 flex items-center justify-center">
+                        <i class="fas fa-cog text-gray-700"></i>
+                    </button>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto p-6 space-y-6">
+                    <div class="bg-white bg-opacity-30 rounded-xl p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                            <p class="font-medium">检测到发音问题</p>
+                        </div>
+                        <p class="text-gray-700 mb-2">
+                            "<span class="font-bold text-red-500">restaurant</span>" 发音应为 /ˈrestrɒnt/，注意不要发成 /rest-aw-rant/
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-volume-up mr-2"></i>
+                            <span>点击听标准发音</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white bg-opacity-30 rounded-xl p-4">
+                            <h4 class="font-medium mb-2">当前会话</h4>
+                            <p class="text-sm text-gray-700">时长: 4分32秒</p>
+                            <p class="text-sm text-gray-700">词汇量: 28个</p>
+                            <p class="text-sm text-gray-700">语法错误: 2处</p>
+                        </div>
+                        <div class="bg-white bg-opacity-30 rounded-xl p-4">
+                            <h4 class="font-medium mb-2">发音准确率</h4>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 rounded-full border-4 border-blue-500 flex items-center justify-center mr-3">
+                                    <span class="text-xl font-bold">87%</span>
+                                </div>
+                                <p class="text-sm text-gray-700">高于85%的用户</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-30 rounded-xl p-4">
+                        <h4 class="font-medium mb-3">建议练习</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-white rounded-full">餐饮场景</span>
+                            <span class="px-4 py-2 bg-white rounded-full">旅行对话</span>
+                            <span class="px-4 py-2 bg-white rounded-full">商务会议</span>
+                            <span class="px-4 py-2 bg-white rounded-full">学术讨论</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

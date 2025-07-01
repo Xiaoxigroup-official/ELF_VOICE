@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepseek - 知识助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .screen {
+            width: 853px;
+            height: 480px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 12px solid #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="screen">
+        <div class="h-full flex flex-col">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                <div class="flex space-x-2 bg-gray-100 rounded-full p-1">
+                    <button class="px-6 py-2 text-gray-700 rounded-full">口语老师</button>
+                    <button class="px-6 py-2 bg-blue-500 text-white rounded-full">知识助手</button>
+                </div>
+                <div class="flex space-x-3">
+                    <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-cog text-gray-600"></i>
+                    </button>
+                    <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-ellipsis-h text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto p-6 space-y-6">
+                <div class="flex justify-end">
+                    <div class="max-w-md bg-blue-500 text-white p-4 rounded-2xl rounded-tr-none">
+                        <p>量子计算的基本原理是什么？它与传统计算有什么本质区别？</p>
+                        <p class="text-xs opacity-70 text-right mt-2">12:34</p>
+                    </div>
+                </div>
+                
+                <div class="flex">
+                    <div class="max-w-md bg-gray-100 p-4 rounded-2xl rounded-tl-none">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-robot text-blue-500 mr-2"></i>
+                            <p class="font-medium">Deepseek 知识助手</p>
+                        </div>
+                        <p class="text-gray-700 mb-2">量子计算利用量子比特(qubit)的叠加和纠缠特性进行计算，与传统二进制比特不同，量子比特可以同时处于0和1的叠加态，这使得量子计算机能够并行处理大量计算。</p>
+                        <div class="bg-white p-3 rounded-lg mb-2">
+                            <p class="text-xs font-medium text-gray-500 mb-1">关键区别：</p>
+                            <p class="text-xs text-gray-700">• 量子并行性：同时计算多种可能性</p>
+                            <p class="text-xs text-gray-700">• 量子纠缠：粒子状态相互关联</p>
+                            <p class="text-xs text-gray-700">• 量子干涉：增强正确结果的概率</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-sm text-blue-500 flex items-center">
+                                <i class="fas fa-thumbs-up mr-1"></i> 有帮助
+                            </button>
+                            <p class="text-xs text-gray-500">12:35</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-end">
+                    <div class="max-w-md bg-blue-500 text-white p-4 rounded-2xl rounded-tr-none">
+                        <p>能举个具体例子说明量子计算的优势吗？</p>
+                        <p class="text-xs opacity-70 text-right mt-2">12:36</p>
+                    </div>
+                </div>
+                
+                <div class="flex">
+                    <div class="max-w-md bg-gray-100 p-4 rounded-2xl rounded-tl-none">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-robot text-blue-500 mr-2"></i>
+                            <p class="font-medium">Deepseek 知识助手</p>
+                        </div>
+                        <p class="text-gray-700 mb-2">例如Shor算法可以在量子计算机上快速分解大整数，而传统计算机需要指数级时间。这威胁到当前RSA加密的安全性。另一个例子是Grover算法，它能在O(√N)时间内搜索未排序数据库，而经典算法需要O(N)时间。</p>
+                        <div class="grid grid-cols-2 gap-3 mb-2">
+                           

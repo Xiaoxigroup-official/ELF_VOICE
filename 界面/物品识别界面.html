@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepseek - 物品识别</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .screen {
+            width: 853px;
+            height: 480px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 12px solid #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+        .desktop-column {
+            display: flex;
+            height: 100%;
+        }
+        .history-item {
+            transition: all 0.2s ease;
+        }
+        .history-item:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="screen">
+        <div class="desktop-column">
+            <div class="w-2/5 bg-gray-100 flex items-center justify-center p-8">
+                <div class="relative w-full h-64">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         class="w-full h-full object-contain" alt="Camera">
+                    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+                    <span class="absolute bottom-4 left-4 text-white font-medium">尼康 FM2 胶片相机</span>
+                </div>
+            </div>
+            <div class="w-3/5 flex flex-col">
+                <div class="p-6 border-b border-gray-100">
+                    <h2 class="text-xl font-medium">物品识别结果</h2>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto p-6 grid grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-tag text-green-500 mr-2"></i>
+                            <h3 class="font-medium">分类</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">摄影器材</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">胶片相机</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">复古设备</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                            <h3 class="font-medium">基本信息</h3>
+                        </div>
+                        <p class="text-gray-700">尼康FM2是1982年推出的35mm胶片单反相机，以其坚固的机械结构和1/4000秒的快门速度闻名，是专业摄影师喜爱的机型。</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-camera text-purple-500 mr-2"></i>
+                            <h3 class="font-medium">规格参数</h3>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-gray-700 text-sm">• 快门速度: 1/4000s - 1s</p>
+                            <p class="text-gray-700 text-sm">• 重量: 540g</p>
+                            <p class="text-gray-700 text-sm">• 尺寸: 142×90×60mm</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-history text-orange-500 mr-2"></i>
+                            <h3 class="font-medium">历史价值</h3>
+                        </div>
+                        <p class="text-gray-700 text-sm">被誉为最可靠的机械相机之一，收藏价值高</p>
+                    </div>
+                </div>
+                
+                <div class="p-4 border-t border-gray-100">
+                    <button class="w-full py-3 bg-blue-500 text-white rounded-lg flex items-center justify-center">
+                        <i class="fas fa-search mr-2"></i> 了解更多技术细节
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepseek - 数学解题</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .screen {
+            width: 853px;
+            height: 480px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 12px solid #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+        .desktop-column {
+            display: flex;
+            height: 100%;
+        }
+        .desktop-half {
+            width: 50%;
+            height: 100%;
+        }
+        .answer-step {
+            transition: all 0.3s ease;
+        }
+        .answer-step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="screen">
+        <div class="desktop-column">
+            <div class="desktop-half p-6 border-r border-gray-100">
+                <div class="h-full bg-gray-50 rounded-xl p-4 flex items-center">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         class="w-full h-auto object-contain rounded-lg" alt="Math problem">
+                </div>
+            </div>
+            <div class="desktop-half flex flex-col">
+                <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                    <h2 class="text-xl font-medium">数学题目解析</h2>
+                    <div class="flex space-x-2">
+                        <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-bookmark text-gray-600"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <div class="answer-step bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-medium text-blue-500">步骤 1</h3>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </div>
+                        <p class="text-gray-700">设圆的方程为 (x-a)² + (y-b)² = r²</p>
+                    </div>
+                    
+                    <div class="answer-step bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-medium text-blue-500">步骤 2</h3>
+                            <i class="fas fa-chevron-up text-gray-400"></i>
+                        </div>
+                        <p class="text-gray-700">将点(3,4)和(6,8)代入方程得到两个方程...</p>
+                    </div>
+                    
+                    <div class="answer-step bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-medium text-blue-500">步骤 3</h3>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </div>
+                        <p class="text-gray-700">解方程组得 a=1, b=2</p>
+                    </div>
+                    
+                    <div class="answer-step bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-medium text-blue-500">最终答案</h3>
+                            <i class="fas fa-check-circle text-green-500"></i>
+                        </div>
+                        <p class="text-gray-700">圆的方程为 (x-1)² + (y-2)² = 10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
